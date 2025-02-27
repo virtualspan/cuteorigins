@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": true,
+  "negative": true,
+  "status_effect": "minecraft:slowness",
+  "potency": 0,
+  "condition": {
+    "check_type": "low_ceiling"
+  }
+}

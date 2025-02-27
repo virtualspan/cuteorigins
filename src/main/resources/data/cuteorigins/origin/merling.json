@@ -1,0 +1,8 @@
+{
+  "icon": "minecraft:cod",
+  "powers": [
+    "cuteorigins:water_breathing",
+    "cuteorigins:water_dweller_attributes",
+    "cuteorigins:air_allergy"
+  ]
+}

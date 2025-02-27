@@ -1,0 +1,11 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": true,
+  "negative": false,
+  "status_effect": "minecraft:slow_falling",
+  "potency": 0,
+  "condition": {
+    "check_type": "sneaking",
+    "inverted": true
+  }
+}

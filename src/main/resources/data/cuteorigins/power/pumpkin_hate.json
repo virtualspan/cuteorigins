@@ -1,0 +1,12 @@
+{
+  "effect": "cuteorigins:cannot_see",
+  "visible": true,
+  "negative": true,
+  "condition": {
+    "check_type": "equipment",
+    "parameters": {
+      "slot": "head",
+      "item": "minecraft:carved_pumpkin"
+    }
+  }
+}

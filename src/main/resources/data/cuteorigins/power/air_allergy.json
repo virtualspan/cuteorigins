@@ -1,0 +1,15 @@
+{
+  "effect": "cuteorigins:damage",
+  "visible": true,
+  "negative": true,
+  "damage": 2,
+  "speed": 20,
+  "damage_type": "minecraft:drown",
+  "condition": {
+    "check_type": "water",
+    "inverted": true,
+    "parameters": {
+      "rain": true
+    }
+  }
+}

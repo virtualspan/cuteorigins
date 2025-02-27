@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": false,
+  "negative": true,
+  "status_effect": "minecraft:hunger",
+  "potency": 2,
+  "condition": {
+    "check_type": "phasing"
+  }
+}

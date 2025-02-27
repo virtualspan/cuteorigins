@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": false,
+  "negative": true,
+  "status_effect": "minecraft:blindness",
+  "potency": 0,
+  "condition": {
+    "check_type": "phasing"
+  }
+}

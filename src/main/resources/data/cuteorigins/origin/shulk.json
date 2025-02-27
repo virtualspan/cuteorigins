@@ -1,0 +1,10 @@
+{
+  "icon": "minecraft:shulker_shell",
+  "powers": [
+    "cuteorigins:shulker_inventory",
+    "cuteorigins:natural_armor",
+    "cuteorigins:extra_exhaustion",
+    "cuteorigins:no_shields",
+    "cuteorigins:bare_hands_stone"
+  ]
+}

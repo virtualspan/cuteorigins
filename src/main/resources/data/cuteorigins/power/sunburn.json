@@ -1,0 +1,8 @@
+{
+  "effect": "cuteorigins:fire",
+  "visible": true,
+  "negative": true,
+  "condition": {
+    "check_type": "daylight"
+  }
+}

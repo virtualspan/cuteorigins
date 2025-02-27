@@ -1,0 +1,9 @@
+{
+  "icon": "minecraft:spider_eye",
+  "powers": [
+    "cuteorigins:fragile",
+    "cuteorigins:carnivore",
+    "cuteorigins:cobweb_attack",
+    "cuteorigins:climb_anywhere"
+  ]
+}

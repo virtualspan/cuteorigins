@@ -1,0 +1,17 @@
+{
+  "effect": "cuteorigins:cannot_use",
+  "visible": true,
+  "negative": true,
+  "whitelist": [
+    {
+      "type": "tag",
+      "id": "minecraft:meat"
+    }
+  ],
+  "blacklist": [
+    {
+      "type": "tag",
+      "id": "c:foods"
+    }
+  ]
+}

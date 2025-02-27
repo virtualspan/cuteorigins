@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:damage_multiplier",
+  "visible": true,
+  "negative": true,
+  "multiplier": 1.5,
+  "damage_type": "minecraft:fly_into_wall",
+  "condition": {
+    "check_type": "always"
+  }
+}

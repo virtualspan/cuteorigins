@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": true,
+  "negative": false,
+  "status_effect": "minecraft:jump_boost",
+  "potency": 1,
+  "condition": {
+    "check_type": "sprinting"
+  }
+}

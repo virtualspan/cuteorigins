@@ -1,0 +1,11 @@
+{
+  "icon": "minecraft:elytra",
+  "powers": [
+    "cuteorigins:elytra_damage_bonus",
+    "cuteorigins:kinetic_damage_penalty",
+    "cuteorigins:launch_into_air",
+    "cuteorigins:permanent_wings",
+    "cuteorigins:low_ceiling_slowness",
+    "cuteorigins:low_ceiling_weakness"
+  ]
+}

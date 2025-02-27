@@ -1,0 +1,13 @@
+{
+  "effect": "cuteorigins:attribute_modifier",
+  "visible": true,
+  "negative": false,
+  "modifiers": [
+    {
+      "id": "cuteorigins:natural_armor",
+      "attribute": "minecraft:armor",
+      "operation": "add_value",
+      "value": 8.0
+    }
+  ]
+}

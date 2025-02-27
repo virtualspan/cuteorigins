@@ -1,0 +1,6 @@
+{
+  "effect": "cuteorigins:potion_immunity",
+  "visible": true,
+  "negative": false,
+  "status_effect": "minecraft:poison"
+}

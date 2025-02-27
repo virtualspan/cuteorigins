@@ -1,0 +1,25 @@
+{
+  "effect": "cuteorigins:attribute_modifier",
+  "visible": true,
+  "negative": false,
+  "modifiers": [
+    {
+      "id": "cuteorigins:normal_underwater_mining",
+      "attribute": "minecraft:submerged_mining_speed",
+      "operation": "add_value",
+      "value": 0.8
+    },
+    {
+      "id": "cuteorigins:normal_underwater_movement",
+      "attribute": "minecraft:water_movement_efficiency",
+      "operation": "add_value",
+      "value": 1
+    },
+    {
+      "id": "cuteorigins:normal_underwater_oxygen",
+      "attribute": "minecraft:oxygen_bonus",
+      "operation": "add_value",
+      "value": 1024
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "icon": "minecraft:ender_pearl",
+  "powers": [
+    "cuteorigins:extended_reach",
+    "cuteorigins:throw_ender_pearl",
+    "cuteorigins:ender_pearl_immunity",
+    "cuteorigins:pumpkin_hate",
+    "cuteorigins:hydrophobia"
+  ]
+}

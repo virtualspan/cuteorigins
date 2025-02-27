@@ -1,0 +1,9 @@
+{
+  "icon": "minecraft:feather",
+  "powers": [
+    "cuteorigins:faster_movement",
+    "cuteorigins:herbivore",
+    "cuteorigins:slow_falling",
+    "cuteorigins:fresh_air"
+  ]
+}

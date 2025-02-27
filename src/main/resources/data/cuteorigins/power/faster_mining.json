@@ -1,0 +1,13 @@
+{
+  "effect": "cuteorigins:attribute_modifier",
+  "visible": true,
+  "negative": false,
+  "modifiers": [
+    {
+      "id": "cuteorigins:faster_mining",
+      "attribute": "minecraft:block_break_speed",
+      "operation": "add_value",
+      "value": 1
+    }
+  ]
+}

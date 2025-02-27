@@ -1,0 +1,11 @@
+{
+  "icon": "minecraft:blaze_powder",
+  "powers": [
+    "cuteorigins:hydrophobia",
+    "cuteorigins:hunger_immunity",
+    "cuteorigins:poison_immunity",
+    "cuteorigins:fire_immunity",
+    "cuteorigins:fire_damage_bonus",
+    "cuteorigins:nether_home"
+  ]
+}

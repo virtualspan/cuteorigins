@@ -1,0 +1,19 @@
+{
+  "effect": "cuteorigins:attribute_modifier",
+  "visible": true,
+  "negative": false,
+  "modifiers": [
+    {
+      "id": "cuteorigins:increased_entity_reach",
+      "attribute": "minecraft:entity_interaction_range",
+      "operation": "add_value",
+      "value": 1.5
+    },
+    {
+      "id": "cuteorigins:increased_block_reach",
+      "attribute": "minecraft:block_interaction_range",
+      "operation": "add_value",
+      "value": 1.5
+    }
+  ]
+}

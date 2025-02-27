@@ -1,0 +1,8 @@
+{
+  "effect": "cuteorigins:invisible",
+  "visible": false,
+  "negative": false,
+  "condition": {
+    "check_type": "phasing"
+  }
+}

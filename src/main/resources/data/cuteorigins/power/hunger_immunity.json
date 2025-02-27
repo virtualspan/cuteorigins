@@ -1,0 +1,9 @@
+{
+  "effect": "cuteorigins:potion_immunity",
+  "visible": false,
+  "negative": false,
+  "status_effect": "minecraft:hunger",
+  "condition": {
+    "check_type": "always"
+  }
+}

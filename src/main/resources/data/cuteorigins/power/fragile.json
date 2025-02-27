@@ -1,0 +1,13 @@
+{
+  "effect": "cuteorigins:attribute_modifier",
+  "visible": true,
+  "negative": true,
+  "modifiers": [
+    {
+      "id": "cuteorigins:fragile_health",
+      "attribute": "minecraft:max_health",
+      "operation": "add_value",
+      "value": -6.0
+    }
+  ]
+}

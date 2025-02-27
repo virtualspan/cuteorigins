@@ -1,0 +1,12 @@
+{
+  "effect": "cuteorigins:sleeping_condition",
+  "visible": true,
+  "negative": true,
+  "message": "message.cuteorigins.fresh_air",
+  "condition": {
+    "check_type": "elevation",
+    "parameters": {
+      "height": 86
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "effect": "cuteorigins:cannot_use",
+  "visible": true,
+  "negative": true,
+  "blacklist": [
+    {
+      "type": "item",
+      "id": "minecraft:shield"
+    }
+  ]
+}

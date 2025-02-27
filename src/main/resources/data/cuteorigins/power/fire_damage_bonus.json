@@ -1,0 +1,9 @@
+{
+  "effect": "cuteorigins:damage_bonus",
+  "visible": true,
+  "negative": false,
+  "multiplier": 1.25,
+  "condition": {
+    "check_type": "fire"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "effect": "cuteorigins:damage_immunity",
+  "visible": false,
+  "negative": false,
+  "damage_types": [
+    "minecraft:ender_pearl"
+  ],
+  "condition": {
+    "check_type": "always"
+  }
+}

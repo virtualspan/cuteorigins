@@ -1,0 +1,10 @@
+{
+  "effect": "cuteorigins:potion_effect",
+  "visible": true,
+  "negative": false,
+  "status_effect": "minecraft:night_vision",
+  "potency": 0,
+  "condition": {
+    "check_type": "always"
+  }
+}

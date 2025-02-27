@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "lol.sylvie.cuteorigins.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CreeperEntityMixin",
+    "EntityMixin",
+    "HungerManagerMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "ScreenHandlerMixin",
+    "ServerPlayerEntityMixin",
+    "SlotMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

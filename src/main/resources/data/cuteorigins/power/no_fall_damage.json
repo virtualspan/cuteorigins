@@ -1,0 +1,11 @@
+{
+  "effect": "cuteorigins:damage_immunity",
+  "visible": true,
+  "negative": false,
+  "damage_types": [
+    "minecraft:fall"
+  ],
+  "condition": {
+    "check_type": "always"
+  }
+}

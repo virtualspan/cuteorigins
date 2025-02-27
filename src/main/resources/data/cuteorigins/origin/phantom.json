@@ -1,0 +1,11 @@
+{
+  "icon": "phantom_membrane",
+  "powers": [
+    "cuteorigins:fragile",
+    "cuteorigins:sunburn",
+    "cuteorigins:phasing",
+    "cuteorigins:phasing_hunger",
+    "cuteorigins:phasing_fire_immunity",
+    "cuteorigins:phasing_blindness"
+  ]
+}

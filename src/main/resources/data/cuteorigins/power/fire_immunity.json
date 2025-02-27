@@ -1,0 +1,9 @@
+{
+  "effect": "cuteorigins:damage_immunity",
+  "visible": true,
+  "negative": false,
+  "damage_types": ["minecraft:in_fire", "minecraft:on_fire", "minecraft:lava"],
+  "condition": {
+    "check_type": "always"
+  }
+}

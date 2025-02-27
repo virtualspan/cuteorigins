@@ -1,0 +1,11 @@
+{
+  "effect": "cuteorigins:modify_harvest",
+  "visible": true,
+  "negative": false,
+  "whitelist": [
+    {
+      "type": "tag",
+      "id": "c:stones"
+    }
+  ]
+}

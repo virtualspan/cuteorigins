@@ -1,0 +1,7 @@
+{
+  "effect": "cuteorigins:action_velocity",
+  "visible": true,
+  "negative": false,
+  "velocity": [0, 2, 0],
+  "cooldown": 600
+}

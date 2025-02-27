@@ -1,0 +1,160 @@
+{
+  "menu.cuteorigins.picker": "Pick an Origin",
+  "menu.cuteorigins.back": "Back",
+  "menu.cuteorigins.next": "Next",
+  "menu.cuteorigins.choose": "Choose",
+  "menu.cuteorigins.beware": "This action cannot be done without an Orb of Origin. (or an admin)",
+  "menu.cuteorigins.success": "You are now a(n) %s!",
+  "menu.cuteorigins.shulker_inventory": "Shulker Inventory",
+  "menu.cuteorigins.binds": "Grab Keybinds",
+
+  "itemGroup.cuteorigins.item_group": "Sylvie's Origins",
+  "message.cuteorigins.cooldown": "This action is on cooldown! (%ss)",
+  "message.cuteorigins.cooldown_over": "You may use %s again!",
+  "message.cuteorigins.fresh_air": "You may not sleep here; you need more fresh air!",
+  "message.cuteorigins.cannot_phase": "You cannot phase here! (hold sneak and try again)",
+
+  "item.cuteorigins.orb_of_origin": "Orb of Origin",
+  "item.cuteorigins.keybind": "Keybind: %s",
+
+  "origin.cuteorigins.human.name": "Human",
+  "origin.cuteorigins.human.description": "A regular human. Your ordinary Minecraft experience awaits.",
+
+  "origin.cuteorigins.enderian.name": "Enderian",
+  "origin.cuteorigins.enderian.description": "Born as descendants of the Ender Dragon, Enderians can teleport but cannot exist in water for long.",
+
+  "power.cuteorigins.extended_reach.name": "Extended Reach",
+  "power.cuteorigins.extended_reach.description": "You can reach blocks and entities from further away.",
+
+  "power.cuteorigins.throw_ender_pearl.name": "Teleportation",
+  "power.cuteorigins.throw_ender_pearl.description": "You can occasionally throw an ender pearl without having any.",
+
+  "power.cuteorigins.pumpkin_hate.name": "Scared of Gourds",
+  "power.cuteorigins.pumpkin_hate.description": "You are afraid of pumpkins, so you can't see anyone wearing them.",
+
+  "power.cuteorigins.hydrophobia.name": "Hydrophobia",
+  "power.cuteorigins.hydrophobia.description": "Water is poison to you.",
+
+  "origin.cuteorigins.arachnid.name": "Arachnid",
+  "origin.cuteorigins.arachnid.description": "Their climbing abilities and the ability to trap their foes in spiderweb make the Arachnid perfect hunters.",
+
+  "power.cuteorigins.fragile.name": "Fragile",
+  "power.cuteorigins.fragile.description": "You are weak and frail, so you only have 6 hearts.",
+
+  "power.cuteorigins.carnivore.name": "Carnivore",
+  "power.cuteorigins.carnivore.description": "You can only eat meat.",
+
+  "power.cuteorigins.cobweb_attack.name": "Webs",
+  "power.cuteorigins.cobweb_attack.description": "Your attacks place cobwebs at your opponent's feet.",
+
+  "power.cuteorigins.climb_anywhere.name": "Climber",
+  "power.cuteorigins.climb_anywhere.description": "You can crawl up just about any surface.",
+
+  "origin.cuteorigins.avian.name": "Avian",
+  "origin.cuteorigins.avian.description": "The Avian race has lost their ability to fly a long time ago. Now these peaceful creatures can be seen gliding from one place to another.",
+
+  "power.cuteorigins.faster_movement.name": "Agile",
+  "power.cuteorigins.faster_movement.description": "You move slightly faster.",
+
+  "power.cuteorigins.herbivore.name": "Herbivore",
+  "power.cuteorigins.herbivore.description": "You cannot digest meat.",
+
+  "power.cuteorigins.slow_falling.name": "Feather-like",
+  "power.cuteorigins.slow_falling.description": "You have permanent slow falling. (though crouching makes you heavy enough to fall normally)",
+
+  "power.cuteorigins.fresh_air.name": "Fresh Air",
+  "power.cuteorigins.fresh_air.description": "You can only sleep in elevated spaces.",
+
+  "origin.cuteorigins.blazeborn.name": "Blazeborn",
+  "origin.cuteorigins.blazeborn.description": "Late descendants of the Blaze, the Blazeborn are naturally immune to the perils of the Nether.",
+
+  "power.cuteorigins.poison_immunity.name": "Highly Resistant",
+  "power.cuteorigins.poison_immunity.description": "Your immune system can withstand far more than most.",
+
+  "power.cuteorigins.fire_immunity.name": "Molten",
+  "power.cuteorigins.fire_immunity.description": "You ARE fire! You cannot take fire-based damage.",
+
+  "power.cuteorigins.fire_damage_bonus.name": "Fire-fueled",
+  "power.cuteorigins.fire_damage_bonus.description": "Being on fire gives you a slight damage boost.",
+
+  "power.cuteorigins.nether_home.name": "Hellborne",
+  "power.cuteorigins.nether_home.description": "You are spawned in the nether.",
+
+  "origin.cuteorigins.elytrian.name": "Elytrian",
+  "origin.cuteorigins.elytrian.description": "Often flying around in the winds, Elytrians are uncomfortable when they don't have enough space above their head.",
+
+  "power.cuteorigins.elytra_damage_bonus.name": "Momentum",
+  "power.cuteorigins.elytra_damage_bonus.description": "Attacking mid-glide grants a major damage boost.",
+
+  "power.cuteorigins.kinetic_damage_penalty.name": "Inertia",
+  "power.cuteorigins.kinetic_damage_penalty.description": "Slamming into a wall while gliding does more damage than it normally would.",
+
+  "power.cuteorigins.launch_into_air.name": "Gift of the Winds",
+  "power.cuteorigins.launch_into_air.description": "You have the ability to occasionally launch yourself into the air.",
+
+  "power.cuteorigins.permanent_wings.name": "Winged",
+  "power.cuteorigins.permanent_wings.description": "You permanently have Elytra wings.",
+
+  "power.cuteorigins.low_ceiling_slowness.name": "Claustrophobia",
+  "power.cuteorigins.low_ceiling_slowness.description": "Two-block tall ceilings make you dizzy.",
+
+  "origin.cuteorigins.feline.name": "Feline",
+  "origin.cuteorigins.feline.description": "With their cat-like appearance, the Feline scare creepers away. With the dexterity of cats, they always land safely on their feet.",
+
+  "power.cuteorigins.no_fall_damage.name": "Softpaws",
+  "power.cuteorigins.no_fall_damage.description": "Fall damage does not apply to you.",
+
+  "power.cuteorigins.higher_sprint_jump.name": "Leaping",
+  "power.cuteorigins.higher_sprint_jump.description": "Sprinting while jumping grants extra height.",
+
+  "power.cuteorigins.scare_creepers.name": "Cat-like Appearance",
+  "power.cuteorigins.scare_creepers.description": "Creepers are naturally scared of you.",
+
+  "power.cuteorigins.night_vision.name": "Evolved Eyes",
+  "power.cuteorigins.night_vision.description": "You naturally have night vision.",
+
+  "power.cuteorigins.nine_lives.name": "Nine Lives",
+  "power.cuteorigins.nine_lives.description": "You only have nine hearts.",
+
+  "power.cuteorigins.no_stone_harvest.name": "No Opposable Thumbs",
+  "power.cuteorigins.no_stone_harvest.description": "You cannot harvest stone.",
+
+  "origin.cuteorigins.merling.name": "Merling",
+  "origin.cuteorigins.merling.description": "These natural inhabitants of the ocean are not used to being out of the water for too long.",
+
+  "power.cuteorigins.water_breathing.name": "Gills",
+  "power.cuteorigins.water_breathing.description": "You can breathe underwater.",
+
+  "power.cuteorigins.water_dweller_attributes.name": "Aquatic",
+  "power.cuteorigins.water_dweller_attributes.description": "You can navigate and mine much quicker underwater.",
+
+  "power.cuteorigins.air_allergy.name": "Lack of Lungs",
+  "power.cuteorigins.air_allergy.description": "You cannot survive above water for very long.",
+
+  "origin.cuteorigins.phantom.name": "Phantom",
+  "origin.cuteorigins.phantom.description": "As half-human and half-phantom beings, these creatures can switch between a Phantom and a normal form.",
+
+  "power.cuteorigins.sunburn.name": "Sunburn",
+  "power.cuteorigins.sunburn.description": "Your skin does not fare well under direct sunlight.",
+
+  "power.cuteorigins.phasing.name": "Phantom Form",
+  "power.cuteorigins.phasing.description": "You can switch to your phantom form, allowing you to phase through the world.",
+
+  "origin.cuteorigins.shulk.name": "Shulk",
+  "origin.cuteorigins.shulk.description": "Related to Shulkers, the bodies of the Shulk are outfitted with a protective shell-like skin.",
+
+  "power.cuteorigins.shulker_inventory.name": "Shulker Box",
+  "power.cuteorigins.shulker_inventory.description": "You have a permanent 9 slot inventory to do with as you please.",
+
+  "power.cuteorigins.natural_armor.name": "Hard-headed",
+  "power.cuteorigins.natural_armor.description": "You have natural armor.",
+
+  "power.cuteorigins.extra_exhaustion.name": "Heavyweight",
+  "power.cuteorigins.extra_exhaustion.description": "You burn through hunger much quicker.",
+
+  "power.cuteorigins.no_shields.name": "Misshapen Hands",
+  "power.cuteorigins.no_shields.description": "You are unable to use a shield correctly.",
+
+  "power.cuteorigins.bare_hands_stone.name": "Bruteforce",
+  "power.cuteorigins.bare_hands_stone.description": "You can mine stone with your bare fist."
+}

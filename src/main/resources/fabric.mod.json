@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "cuteorigins",
+  "version": "${version}",
+
+  "name": "Sylvie's Origins",
+  "description": "An unofficial server-side \"port\" of the Origin's mod, built with Bedrock & vanilla support.",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/cuteorigins/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": ["lol.sylvie.cuteorigins.CuteOrigins"]
+  },
+
+  "mixins": [
+    "cuteorigins.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_3222": ["lol/sylvie/cuteorigins/mixininterfaces/Phasable"]
+    }
+  }
+}
