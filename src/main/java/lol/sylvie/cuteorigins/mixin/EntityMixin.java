@@ -5,6 +5,8 @@ import lol.sylvie.cuteorigins.power.effect.Effect;
 import lol.sylvie.cuteorigins.power.effect.impl.CannotSeeEffect;
 import lol.sylvie.cuteorigins.power.effect.impl.InvisibleEffect;
 import lol.sylvie.cuteorigins.state.StateManager;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -27,19 +29,19 @@ public class EntityMixin {
     }
 
     @Inject(method = "canBeSpectated", at = @At("HEAD"), cancellable = true)
-    public void cuteorigins_broadcast(ServerPlayerEntity spectator, CallbackInfoReturnable<Boolean> cir) {
+    public void origins$broadcast(ServerPlayerEntity spectator, CallbackInfoReturnable<Boolean> cir) {
         if (isInvisibleTo(spectator)) cir.setReturnValue(false);
     }
 
     @Inject(method = "isInvisibleTo", at = @At("HEAD"), cancellable = true)
-    public void cuteorigins_invisibleTo(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
+    public void origins$invisibleTo(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
         if ((player instanceof ServerPlayerEntity serverPlayer) && isInvisibleTo(serverPlayer)) cir.setReturnValue(false);
     }
 
     @Inject(method = "isInvisible", at = @At("HEAD"), cancellable = true)
-    public void cuteorigins_invisible(CallbackInfoReturnable<Boolean> cir) {
+    public void origins$invisible(CallbackInfoReturnable<Boolean> cir) {
         Entity thisEntity = (Entity) (Object) this;
-        if (thisEntity instanceof PlayerEntity player) {
+        if (thisEntity instanceof ServerPlayerEntity player) {
             Origin origin = StateManager.getPlayerState(player).getOrigin();
             if (origin == null) return;
             for (Effect effect : origin.getEffectsOfType(InvisibleEffect.class)) {

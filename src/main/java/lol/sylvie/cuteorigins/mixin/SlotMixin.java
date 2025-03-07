@@ -17,7 +17,7 @@ public class SlotMixin {
     @Shadow @Final public Inventory inventory;
 
     @Inject(method = "canInsert", at = @At("HEAD"), cancellable = true)
-    public void cuteorigins$noKeybindInsertion(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    public void origins$noKeybindInsertion(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (stack.isOf(ModItems.KEYBIND_ITEM) && !(inventory instanceof PlayerInventory)) cir.setReturnValue(false);
     }
 }

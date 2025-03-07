@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 @Mixin(HungerManager.class)
 public class HungerManagerMixin {
     @ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/HungerManager;addExhaustion(F)V"))
-    private float injected(float value, @Local(argsOnly = true) ServerPlayerEntity player) {
+    private float origins$hungerUpdate(float value, @Local(argsOnly = true) ServerPlayerEntity player) {
         Origin origin = StateManager.getPlayerState(player).getOrigin();
         if (origin == null) return value;
         for (Effect effect : origin.getEffectsOfType(ExhaustionEffect.class)) {

@@ -15,10 +15,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ScreenHandler.class)
 public class ScreenHandlerMixin {
-    @Shadow @Final public DefaultedList<Slot> slots;
-
     @Inject(method = "canInsertItemIntoSlot", at = @At("HEAD"), cancellable = true)
-    private static void cuteorigins$noKeybindInsertion(Slot slot, ItemStack stack, boolean allowOverflow, CallbackInfoReturnable<Boolean> cir) {
+    private static void origins$noKeybindInsertion(Slot slot, ItemStack stack, boolean allowOverflow, CallbackInfoReturnable<Boolean> cir) {
         if (stack.isOf(ModItems.KEYBIND_ITEM) && !(slot.inventory instanceof PlayerInventory)) cir.setReturnValue(false);
     }
 }

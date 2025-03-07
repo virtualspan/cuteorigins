@@ -32,6 +32,7 @@ import java.util.ArrayList;
 
 public class EventRegistry {
     public static boolean cannotUse(Item item, PlayerEntity user) {
+        if (!(user instanceof ServerPlayerEntity)) return false;
         Origin origin = StateManager.getPlayerState(user).getOrigin();
         if (origin == null) return false;
         for (Effect effect : origin.getEffectsOfType(CannotUseEffect.class)) {

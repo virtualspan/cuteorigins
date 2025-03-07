@@ -35,13 +35,13 @@ public abstract class CreeperEntityMixin extends HostileEntity {
     }
 
     @Inject(at = @At("TAIL"), method = "initGoals")
-    private void addGoals(CallbackInfo ci) {
+    private void origins$addGoals(CallbackInfo ci) {
         Goal goal = new FleeEntityGoal<>(this, PlayerEntity.class, this::scaresCreepers, 6.0F, 1.0D, 1.2D, EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR::test);
         this.goalSelector.add(3, goal);
     }
 
     @Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/ai/goal/GoalSelector;add(ILnet/minecraft/entity/ai/goal/Goal;)V", ordinal = 8), method = "initGoals")
-    private void redirectTargetGoal(GoalSelector instance, int priority, Goal goal) {
+    private void origins$redirectTargetGoal(GoalSelector instance, int priority, Goal goal) {
         Goal newGoal = new ActiveTargetGoal<>(this, PlayerEntity.class, 10, true, false, (target, world) -> !scaresCreepers(target));
         goalSelector.add(priority, newGoal);
     }
