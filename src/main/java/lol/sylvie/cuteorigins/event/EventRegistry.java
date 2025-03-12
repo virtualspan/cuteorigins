@@ -93,6 +93,8 @@ public class EventRegistry {
         });
 
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+            if (!(player instanceof ServerPlayerEntity)) return 
+ActionResult.PASS;
             Origin origin = StateManager.getPlayerState(player).getOrigin();
             if (origin != null) return origin.onAttack(player, entity);
             return ActionResult.PASS;
