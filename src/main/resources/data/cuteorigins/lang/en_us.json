@@ -14,6 +14,9 @@
   "message.cuteorigins.fresh_air": "You may not sleep here; you need more fresh air!",
   "message.cuteorigins.cannot_phase": "You cannot phase here! (hold sneak and try again)",
 
+  "commands.origin.set.not_found": "Origin %s does not exist",
+  "commands.origin.set.success": "Successfully set the origin of %s to %s",
+
   "item.cuteorigins.orb_of_origin": "Orb of Origin",
   "item.cuteorigins.keybind": "Keybind: %s",
 
