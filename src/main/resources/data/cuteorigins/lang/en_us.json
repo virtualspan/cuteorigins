@@ -156,5 +156,11 @@
   "power.cuteorigins.no_shields.description": "You are unable to use a shield correctly.",
 
   "power.cuteorigins.bare_hands_stone.name": "Bruteforce",
-  "power.cuteorigins.bare_hands_stone.description": "You can mine stone with your bare fist."
+  "power.cuteorigins.bare_hands_stone.description": "You can mine stone with your bare fist.",
+
+  "power.cuteorigins.bad_reputation.name": "Bad Reputation",
+  "power.cuteorigins.bad_reputation.description": "Villagers don't like you very much.",
+
+  "power.cuteorigins.enchantingly_gifted.name": "Enchantingly Gifted",
+  "power.cuteorigins.enchantingly_gifted.description": "The Enchanting Table uses much less of your experience than it does for others."
 }

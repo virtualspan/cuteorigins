@@ -18,16 +18,18 @@ public class TogglePhasingEffect extends Effect {
 
     @Override
     public void onAction(ServerPlayerEntity player) {
-        Phasable phasable = (Phasable) player;
+        Phasable phasable = player;
         if (!phasable.origins$canPhase()) {
             player.sendMessage(Text.translatable("message.cuteorigins.cannot_phase"), true);
             return;
         }
 
         boolean phasing = !phasable.origins$isPhasing();
-        phasable.origins$setPhasing(phasing);
+        phasable.origins$setAndSyncPhasing(phasing);
+
         if (phasing) {
-            player.setMovement(new Vec3d(0d, -0.1d, 0d));
+            player.addVelocity(0d, -0.1d, 0d);
+            player.velocityModified = true;
         }
     }
 

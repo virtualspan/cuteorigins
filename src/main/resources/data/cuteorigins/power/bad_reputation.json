@@ -1,0 +1,6 @@
+{
+  "effect": "cuteorigins:villager_gossip",
+  "visible": true,
+  "negative": true,
+  "reputation": -200
+}

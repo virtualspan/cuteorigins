@@ -32,8 +32,8 @@ public class EffectRegistry {
         putEffect(CannotSeeEffect.class);
         putEffect(DamageEffect.class);
         putEffect(DebugEffect.class);
+        putEffect(EnchantmentDiscountEffect.class);
         putEffect(EnderPearlEffect.class);
-
         putEffect(DamageBonusEffect.class);
         putEffect(DamageMultiplierEffect.class);
 
@@ -61,6 +61,8 @@ public class EffectRegistry {
 
         putEffect(TogglePhasingEffect.class);
         putEffect(InvisibleEffect.class);
+
+        putEffect(VillagerGossipEffect.class);
     }
 
     public Effect getEffect(Identifier identifier, JsonObject parameters) {

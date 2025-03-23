@@ -7,4 +7,6 @@ public interface Phasable {
     boolean origins$canPhase();
 
     void origins$setPhasing(boolean value);
+    void origins$syncPhaseState();
+    void origins$setAndSyncPhasing(boolean value);
 }

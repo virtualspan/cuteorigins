@@ -11,7 +11,8 @@
     "PlayerEntityMixin",
     "ScreenHandlerMixin",
     "ServerPlayerEntityMixin",
-    "SlotMixin"
+    "SlotMixin",
+    "VillagerEntityMixin"
   ],
   "client": [
   ],

@@ -33,7 +33,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements Ph
     public ServerPlayerEntityMixin(World world, BlockPos pos, float yaw, GameProfile gameProfile) {super(world, pos, yaw, gameProfile);}
 
     @Unique
-    private void origins$syncPhaseState() {
+    public void origins$syncPhaseState() {
         boolean phasing = origins$isPhasing();
         GameMode oldGameMode = interactionManager.getGameMode();
         if (oldGameMode == GameMode.SPECTATOR) return;
@@ -45,13 +45,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements Ph
         networkHandler.sendPacket(packet);
 
         PlayerAbilities abilities = this.getAbilities();
-        abilities.allowFlying = !gameMode.isSurvivalLike() || phasing;
-        abilities.flying = gameMode.isCreative() ? abilities.flying : phasing;
-        if (phasing) {
-            this.getAbilities().setFlySpeed(0.03f);
-        } else {
-            this.getAbilities().setFlySpeed(0.1f);
-        }
+        abilities.flying = phasing;
 
         this.noClip = gameMode == GameMode.SPECTATOR;
         this.sendAbilitiesUpdate();
@@ -85,12 +79,15 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements Ph
     @Inject(method = "tick", at = @At("TAIL"))
     public void origins$phaseTick(CallbackInfo ci) {
         boolean phaseState = origins$isPhasing();
-        if (phaseState && !origins$canPhase()) {
-            origins$setAndSyncPhasing(false);
-            return;
+        if (phaseState) {
+            if (!origins$canPhase()) {
+                origins$setAndSyncPhasing(false);
+                this.getAbilities().setFlySpeed(0.1f);
+            } else {
+                this.getAbilities().setFlySpeed(0.03f);
+            }
+            this.sendAbilitiesUpdate();
         }
-
-        origins$syncPhaseState();
     }
 
     @ModifyReturnValue(method = "isSpectator", at = @At("RETURN"))
