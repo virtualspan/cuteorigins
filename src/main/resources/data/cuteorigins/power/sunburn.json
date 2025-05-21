@@ -3,6 +3,7 @@
   "visible": true,
   "negative": true,
   "condition": {
-    "check_type": "daylight"
+    "check_type": "daylight",
+    "ignore_water": false
   }
 }

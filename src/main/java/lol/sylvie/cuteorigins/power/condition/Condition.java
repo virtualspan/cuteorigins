@@ -19,12 +19,12 @@ public class Condition {
     private static final Random random = new Random();
 
     // MobEntity.class
-    private boolean isAffectedByDaylight(LivingEntity entity) {
+    private boolean isAffectedByDaylight(LivingEntity entity, boolean ignoreWater) {
         if (entity.getWorld().isDay() && !entity.getWorld().isClient) {
             float f = entity.getBrightnessAtEyes();
             BlockPos blockPos = BlockPos.ofFloored(entity.getX(), entity.getEyeY(), entity.getZ());
-            boolean bl = entity.isWet() || entity.inPowderSnow || entity.wasInPowderSnow;
-            return f > 0.5F && random.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && !bl && entity.getWorld().isSkyVisible(blockPos);
+            boolean bl = !ignoreWater && (entity.isTouchingWaterOrRain() || entity.inPowderSnow || entity.wasInPowderSnow);
+            return f > 0.5F && !bl && entity.getWorld().isSkyVisible(blockPos);
         }
 
         return false;
@@ -45,7 +45,7 @@ public class Condition {
                 boolean submerged = params.has("submerged") && params.get("submerged").getAsBoolean();
                 boolean rain = params.has("rain") && params.get("rain").getAsBoolean();
                 predicate = ctx -> {
-                    if (rain && ctx.target.isWet()) return true;
+                    if (rain && ctx.target.isTouchingWaterOrRain()) return true;
                     if (submerged) {
                         return ctx.target.isSubmergedInWater();
                     }
@@ -69,7 +69,10 @@ public class Condition {
                 int height = params.get("height").getAsInt();
                 predicate = ctx -> ctx.target.getY() >= height;
             }
-            case DAYLIGHT -> predicate = ctx -> ctx.target instanceof ServerPlayerEntity living && isAffectedByDaylight(living);
+            case DAYLIGHT -> {
+                boolean ignoreWater = params.has("ignore_water") && params.get("ignore_water").getAsBoolean();
+                predicate = ctx -> ctx.target instanceof ServerPlayerEntity living && isAffectedByDaylight(living, ignoreWater);
+            }
             case ALWAYS -> predicate = ctx -> true;
             default -> throw new NotImplementedException("CheckType " + checkType + " is not implemented");
         }

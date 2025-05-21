@@ -1,30 +1,44 @@
 package lol.sylvie.cuteorigins.state;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import lol.sylvie.cuteorigins.CuteOrigins;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EnderChestInventory;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtList;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.Identifier;
+import net.minecraft.util.Uuids;
 import net.minecraft.world.PersistentState;
 import net.minecraft.world.PersistentStateManager;
+import net.minecraft.world.PersistentStateType;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class StateManager extends PersistentState {
-    public HashMap<UUID, PlayerData> players = new HashMap<>();
+    public HashMap<UUID, PlayerData> players;
 
-    private static final Type<StateManager> TYPE = new Type<>(
-            StateManager::new,
-            StateManager::createFromNbt,
-            null
-    );
+    public static final Codec<StateManager> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                    Codec.unboundedMap(Uuids.CODEC, PlayerData.CODEC).fieldOf("players").forGetter(StateManager::getPlayers))
+            .apply(instance, StateManager::new));
 
+    private static final PersistentStateType<StateManager> TYPE = new PersistentStateType<>(CuteOrigins.MOD_ID,
+            StateManager::new, CODEC, null);
+
+    // Constructors
+    public StateManager() {
+        this.players = new HashMap<>();
+    }
+
+    public StateManager(Map<UUID, PlayerData> players) {
+        this.players = new HashMap<>(players);
+    }
+
+    // Getters
+    public Map<UUID, PlayerData> getPlayers() {
+        return players;
+    }
+    /*
     public static StateManager createFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         StateManager state = new StateManager();
 
@@ -61,11 +75,11 @@ public class StateManager extends PersistentState {
 
         nbt.put("players", playersNbt);
         return nbt;
-    }
+    }*/
 
     public static StateManager getServerState(MinecraftServer server) {
         PersistentStateManager persistentStateManager = server.getOverworld().getPersistentStateManager();
-        StateManager state = persistentStateManager.getOrCreate(TYPE, CuteOrigins.MOD_ID);
+        StateManager state = persistentStateManager.getOrCreate(TYPE);
 
         state.markDirty();
 

@@ -41,13 +41,14 @@ public class NetherHomeEffect extends Effect {
         }
 
         player.teleport(serverWorld, pos.getX(), pos.getY(), pos.getZ(), Set.of(), 0f, 0f, false);
-        player.setSpawnPoint(serverWorld.getRegistryKey(), pos, 0f, true, false);
+        player.setSpawnPoint(new ServerPlayerEntity.Respawn(serverWorld.getRegistryKey(), pos, 0f, true), false);
     }
 
     @Override
     public void onRemoved(ServerPlayerEntity player) {
-        if (player.getSpawnPointDimension().equals(World.NETHER)) {
-            player.setSpawnPoint(World.OVERWORLD, Objects.requireNonNull(player.getServer()).getOverworld().getSpawnPos(), 0, false, false);
+        ServerPlayerEntity.Respawn respawn = player.getRespawn();
+        if (respawn != null && respawn.forced() && respawn.dimension().equals(World.NETHER)) {
+            player.setSpawnPoint(null, false);
         }
     }
 
