@@ -2,12 +2,10 @@ package lol.sylvie.cuteorigins.item;
 
 import com.mojang.serialization.Codec;
 import eu.pb4.polymer.core.api.other.PolymerComponent;
-import eu.pb4.polymer.core.api.utils.PolymerUtils;
 import lol.sylvie.cuteorigins.CuteOrigins;
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 public class ModComponents {
     public static final ComponentType<String> POWER_KEYBIND = Registry.register(

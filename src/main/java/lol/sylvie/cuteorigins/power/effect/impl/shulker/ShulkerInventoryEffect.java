@@ -31,7 +31,7 @@ public class ShulkerInventoryEffect extends Effect {
 
             @Override
             public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-                return new GenericContainerScreenHandler(ScreenHandlerType.GENERIC_3X3, syncId, playerInventory, StateManager.getPlayerState(player).shulkerInventory, 1);
+                return new GenericContainerScreenHandler(ScreenHandlerType.GENERIC_3X3, syncId, playerInventory, StateManager.getPlayerState(player).getShulkerInventory(), 1);
             }
         });
     }

@@ -2,6 +2,7 @@ package lol.sylvie.cuteorigins.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
+import lol.sylvie.cuteorigins.mixininterfaces.Phasable;
 import lol.sylvie.cuteorigins.origin.Origin;
 import lol.sylvie.cuteorigins.power.effect.Effect;
 import lol.sylvie.cuteorigins.power.effect.impl.*;
@@ -105,5 +106,12 @@ public class PlayerEntityMixin {
 
         int sumOffset = origin.getEffectsOfType(EnchantmentDiscountEffect.class).stream().mapToInt(m -> ((EnchantmentDiscountEffect) m).getDiscount()).sum();
         return Math.min(Math.max(originalCost - sumOffset, 0), player.experienceLevel); // A negative value will add xp, which I don't see much point in.
+    }
+
+    @ModifyReturnValue(method = "isSpectator", at = @At("RETURN"))
+    public boolean origins$disableCollision(boolean original) {
+        PlayerEntity thisPlayer = (PlayerEntity) (Object) this;
+        if (!(thisPlayer instanceof Phasable player)) return original;
+        return original || player.origins$isPhasing();
     }
 }

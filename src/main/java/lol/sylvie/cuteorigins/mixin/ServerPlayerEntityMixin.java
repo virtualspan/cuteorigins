@@ -89,9 +89,4 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements Ph
             this.sendAbilitiesUpdate();
         }
     }
-
-    @ModifyReturnValue(method = "isSpectator", at = @At("RETURN"))
-    public boolean origins$disableCollision(boolean original) {
-        return original || origins$isPhasing();
-    }
 }

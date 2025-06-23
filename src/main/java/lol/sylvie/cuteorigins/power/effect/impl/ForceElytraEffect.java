@@ -2,11 +2,8 @@ package lol.sylvie.cuteorigins.power.effect.impl;
 
 import com.google.gson.JsonObject;
 import lol.sylvie.cuteorigins.CuteOrigins;
-import lol.sylvie.cuteorigins.power.condition.Condition;
 import lol.sylvie.cuteorigins.power.effect.Effect;
-import lol.sylvie.cuteorigins.util.JsonHelper;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
@@ -14,8 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.server.command.ItemCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Unit;
 
 public class ForceElytraEffect extends Effect {
     public static final Identifier IDENTIFIER = CuteOrigins.identifier("force_elytra");
@@ -31,15 +30,15 @@ public class ForceElytraEffect extends Effect {
             Registry<Enchantment> enchantmentRegistry = player.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
             elytra.addEnchantment(enchantmentRegistry.getEntry(Enchantments.BINDING_CURSE.getValue()).orElseThrow(), 1);
             elytra.addEnchantment(enchantmentRegistry.getEntry(Enchantments.VANISHING_CURSE.getValue()).orElseThrow(), 1);
-            elytra.set(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+            elytra.set(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
             player.equipStack(EquipmentSlot.CHEST, elytra);
         }
     }
 
     @Override
     public void onRemoved(ServerPlayerEntity player) {
-        ItemStack slot = player.getInventory().armor.get(2);
-        if (slot.isOf(Items.ELYTRA)) player.getInventory().armor.set(2, ItemStack.EMPTY);
+        ItemStack slot = player.getInventory().getStack(103);
+        if (slot.isOf(Items.ELYTRA)) player.getInventory().setStack(103, ItemStack.EMPTY);
     }
 
     public static Effect fromJson(JsonObject object) {
